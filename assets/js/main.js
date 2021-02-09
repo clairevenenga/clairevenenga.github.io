@@ -7,9 +7,7 @@
 (function($) {
 
 	var	$window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$all = $body.add($header);
+		$body = $('body');
 
 	// Breakpoints.
 		breakpoints({
@@ -196,12 +194,6 @@
 				clearTimeout(resizeTimeout);
 
 				resizeTimeout = setTimeout(function() {
-
-					// Update scrolly links.
-						$('a[href^="#"]').scrolly({
-							speed: 1500,
-							offset: $header.outerHeight() - 1
-						});
 
 					// Re-enable animations/transitions.
 						setTimeout(function() {
